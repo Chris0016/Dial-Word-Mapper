@@ -2,7 +2,7 @@ public class Main{
 
 
 	public static void main(String[] args){
-		Runner run = new Runner(634, "LargeDictionary.txt") ;
+		Runner run = new Runner(634, "SmallDictionary.txt") ;
 	
 
 		/*
