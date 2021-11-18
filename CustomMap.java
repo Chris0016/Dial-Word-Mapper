@@ -1,3 +1,8 @@
+/**
+*@author Christopher Perez
+*@version 1.0.0
+*/
+
 import java.util.HashSet;
 import java.util.Set;
 import java.util.HashMap;

@@ -1,3 +1,9 @@
+/**
+*@author Christopher Perez
+*@version 1.0.0
+*/
+
+
 public class Word{
 	private String word;
 	private long key;
@@ -63,7 +69,7 @@ public class Word{
 	private int getLetterHash(char curr){
 		int holder =  (curr - 64);
 		
-		if (holder < 0) //
+		if (holder < 0) // Used for non letter characters
 			holder = 0;
 
 		//System.out.println("Holder for : " + curr +" " + holder);

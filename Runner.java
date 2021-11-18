@@ -1,3 +1,7 @@
+/**
+*@author Christopher Perez
+*@version 1.0.0
+*/
 import java.util.*;
 import java.io.*;
 
@@ -32,7 +36,7 @@ public class Runner{
             userIn = in.nextLine();
 
             if (userIn.toUpperCase().equals("Q"))
-                break; //System.exit(0);
+                break; 
 
             try{
                 holder = Long.parseLong(userIn);
@@ -52,14 +56,15 @@ public class Runner{
             System.out.println();
 
         }
-
+        this.endSession();
         System.out.println("Thanks for Playing.");
+
     }
 
         
 
     public void load(){
-        //Iterate through the file for every word
+        //Iterate through the file for every word and add it throught the custom map
         String current = txtFile.next();
         while(txtFile.hasNext()){
             if (current.length() < 19){
