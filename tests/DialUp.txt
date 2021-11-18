@@ -1,9 +1,9 @@
-public class Main{
+KLJ JKL LKJ KJL LJK 
+ACB AAA ABC CBA BAC CAB 
+AB CA CB 
 
-
-	public static void main(String[] args){
-		Word myWord = new Word("JKL");
-		String[] strings = {"JKL", "LKJ", "KJL", "LJK", "KLJ"};
+Code: 
+String[] strings = {"JKL", "LKJ", "KJL", "LJK", "KLJ"};
 		String[] strings2 = {"ABC", "CBA", "BAC", "CAB", "ACB", "AAA"};
 		String[] strings3 = {"AB", "CA", "BAC", "CAB", "CB", "AAA"};
 
@@ -18,6 +18,3 @@ public class Main{
 
 		dialUp.insertStrings(strings3);
 		dialUp.printHashSet(dialUp.getHashSetByKey(22));
-
-	}
-}

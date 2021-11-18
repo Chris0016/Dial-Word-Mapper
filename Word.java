@@ -4,13 +4,13 @@ public class Word{
 	private byte wSize;
 
 	public Word(String word, int key){
-		this.word = word;
+		this.word = word.toUpperCase();
 		this.key = key;
 		wSize = (byte)word.length();
 	}
 
 	public Word(String word){
-		this.word = word;
+		this.word = word.toUpperCase();
 		wSize = (byte)word.length();
 		this.key = makeKey();
 		

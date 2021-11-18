@@ -35,3 +35,5 @@ String alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 			myWord.setWord(Character.toString(alphabet.charAt(i)));
 			System.out.println("Key for " +  myWord.getWord() + ": " + myWord.getKey());	
 		}
+
+
