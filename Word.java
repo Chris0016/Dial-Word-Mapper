@@ -1,49 +1,53 @@
 public class Word{
 	private String word;
-	private int key;
-	private byte wSize;
+	private long key;
+	private int wSize;
 
-	public Word(String word, int key){
-		this.word = word.toUpperCase();
+	public Word(String word, long key){
+		this.word = word;
 		this.key = key;
-		wSize = (byte)word.length();
+		wSize = word.length();
 	}
 
 	public Word(String word){
 		this.word = word.toUpperCase();
-		wSize = (byte)word.length();
+		wSize = word.length();
 		this.key = makeKey();
-		
-		
+
 	}
 
-
-	public void setKey(int key){
+	public void setKey(long key){
 		this.key = key;
+	
 	}
 
 	public void setWord(String word ){
-		this.word = word;
-		wSize = (byte)word.length();
+		this.word = word.toUpperCase();
+		wSize = word.length();
 		this.key = makeKey();
+	
 	}
 
-	public int getKey(){
+	public long getKey(){
 		return this.key;
+	
 	}
+	
 	public String getWord(){
 		return this.word;
+	
 	}
 
-	public int makeKey(){
+	public long makeKey(){
 		String holder = "";
 
-		for(byte i = 0; i < wSize; i++){
+		for(int i = 0; i < wSize; i++){
 			holder += getLetterHash(word.charAt(i));
 			
 		}
 
-		return Integer.parseInt(holder);
+
+		return Long.parseLong(holder);
 	}
 
 
@@ -58,8 +62,12 @@ public class Word{
 	*/
 	private int getLetterHash(char curr){
 		int holder =  (curr - 64);
+		
+		if (holder < 0) //
+			holder = 0;
 
-		if (holder >= 23) // letter W or any letter after. 
+		//System.out.println("Holder for : " + curr +" " + holder);
+		else if (holder >= 23) // letter W or any letter after. 
 			holder = 9;
 		else if (holder >= 20) //letter T or any letter after. 
 			holder = 8;

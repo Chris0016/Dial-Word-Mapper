@@ -2,22 +2,19 @@ public class Main{
 
 
 	public static void main(String[] args){
-		Word myWord = new Word("JKL");
-		String[] strings = {"JKL", "LKJ", "KJL", "LJK", "KLJ"};
-		String[] strings2 = {"ABC", "CBA", "BAC", "CAB", "ACB", "AAA"};
-		String[] strings3 = {"AB", "CA", "BAC", "CAB", "CB", "AAA"};
+		Runner run = new Runner(634, "LargeDictionary.txt") ;
+	
 
-		DialUp dialUp = new DialUp();
+		/*
+		String word = "absolutely";
+		int size = word.length();
+		Word myWord = new Word("absolutely");
+		System.out.println("Key for orginal: " + myWord.getKey());
 
-		dialUp.insertStrings(strings);
-		dialUp.printHashSet(dialUp.getHashSetByKey(555));
-
-
-		dialUp.insertStrings(strings2);
-		dialUp.printHashSet(dialUp.getHashSetByKey(222));
-
-		dialUp.insertStrings(strings3);
-		dialUp.printHashSet(dialUp.getHashSetByKey(22));
-
+		for(int i = 0; i < size; i++){
+			myWord.setWord(Character.toString(word.charAt(i)).toUpperCase().trim());
+			System.out.println("Key for " +  myWord.getWord() + ": " + myWord.getKey());	
+		}
+		*/
 	}
 }
